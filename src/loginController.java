@@ -1,11 +1,14 @@
-import javafx.event.ActionEvent;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.Group;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class loginController {
+public class loginController implements Initializable{
 
     @FXML
     private TextField emailText;
@@ -21,5 +24,15 @@ public class loginController {
 
     @FXML
     private Group signUpBtn;
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+         
+        signUpBtn.setOnKeyPressed(e -> {
+            
+        });
+    }
+
+    
 
 }
