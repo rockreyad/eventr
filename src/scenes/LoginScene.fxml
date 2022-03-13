@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+ 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
@@ -13,8 +13,8 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #0f0222;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+ 
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #0f0222;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" >
    <children>
       <AnchorPane prefHeight="390.0" prefWidth="300.0" style="-fx-background-color: white;">
          <children>
@@ -86,7 +86,7 @@
                               <TextField fx:id="passwordText" prefHeight="40.0" prefWidth="244.0" style="-fx-border-color: gray; -fx-border-radius: 5px;" />
                            </children>
                         </VBox>
-                        <Button fx:id="signInBtn" mnemonicParsing="false" onAction="#signInBtnClick" prefHeight="41.0" prefWidth="255.0" style="-fx-background-color: #5ABFAD;" text="SIGN IN" textFill="WHITE">
+                        <Button fx:id="signInBtn" mnemonicParsing="false" prefHeight="41.0" prefWidth="255.0" style="-fx-background-color: #5ABFAD;" text="SIGN IN" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
@@ -96,6 +96,7 @@
                         </Button>
                         <Label fx:id="forgotPassword" alignment="CENTER" contentDisplay="CENTER" text="Forgot your password?" textFill="#1d72d3">
                            <VBox.margin>
+                           
                               <Insets top="10.0" />
                            </VBox.margin>
                         </Label>
@@ -107,3 +108,6 @@
       </AnchorPane>
    </children>
 </AnchorPane>
+ 
+ 
+

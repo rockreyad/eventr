@@ -1,5 +1,3 @@
-package scenes.controllers;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Group;
@@ -7,7 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class loginPage {
+public class loginController {
 
     @FXML
     private TextField emailText;
@@ -24,15 +22,4 @@ public class loginPage {
     @FXML
     private Group signUpBtn;
 
-    public void setSignInBtn(Button signInBtn) {
-        this.signInBtn = signInBtn;
-    }
-
-    void signInBtnClick(ActionEvent event)
-    {
-        
-    }
-
-
-    
 }
