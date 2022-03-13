@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #0f0222;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="390.0" prefWidth="300.0" style="-fx-background-color: white;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="40.0" layoutX="257.0" layoutY="-4.0" stroke="#0000002a" strokeType="INSIDE" strokeWidth="0.0" width="33.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.24439571797847748" green="0.8947368264198303" blue="0.5912443399429321" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.19607843458652496" green="0.7803921699523926" blue="0.7215686440467834" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Group fx:id="signUpBtn" layoutX="244.0" layoutY="3.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="26.0" layoutX="27.0" layoutY="1.0" stroke="#85838329" strokeType="INSIDE" strokeWidth="0.0" width="6.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="26.0" layoutX="27.0" layoutY="1.0" rotate="90.0" stroke="#85838329" strokeType="INSIDE" strokeWidth="0.0" width="6.0" />
+               </children>
+            </Group>
+            <VBox alignment="CENTER" fillWidth="false" layoutX="25.0" layoutY="20.0" prefHeight="350.0" prefWidth="250.0" style="-fx-alignment: center;">
+               <children>
+                  <HBox prefHeight="46.0" prefWidth="250.0" spacing="150.0">
+                     <children>
+                        <Label alignment="TOP_CENTER" text="eventr" textFill="#0f0222">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <VBox alignment="CENTER" prefHeight="318.0" prefWidth="257.0" spacing="2.0" style="-fx-alignment: center;">
+                     <children>
+                        <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Log In to Eventr" textFill="#0f0222d1">
+                           <font>
+                              <Font name="Tw Cen MT Bold" size="25.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin>
+                        </Label>
+                        <VBox prefHeight="65.0" prefWidth="255.0">
+                           <children>
+                              <Label text="E-mail" textFill="#0f0222b2">
+                                 <font>
+                                    <Font name="Tw Cen MT Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="emailText" prefHeight="40.0" prefWidth="244.0" style="-fx-border-color: gray; -fx-border-radius: 5px;" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="65.0" prefWidth="255.0">
+                           <children>
+                              <Label text="Password" textFill="#0f0222b2">
+                                 <font>
+                                    <Font name="Tw Cen MT Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="passwordText" prefHeight="40.0" prefWidth="244.0" style="-fx-border-color: gray; -fx-border-radius: 5px;" />
+                           </children>
+                        </VBox>
+                        <Button fx:id="signInBtn" mnemonicParsing="false" onAction="#signInBtnClick" prefHeight="41.0" prefWidth="255.0" style="-fx-background-color: #5ABFAD;" text="SIGN IN" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Label fx:id="forgotPassword" alignment="CENTER" contentDisplay="CENTER" text="Forgot your password?" textFill="#1d72d3">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
