@@ -1,19 +1,41 @@
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.scene.Group;
 import javafx.scene.Node;
 
-public class sceneController {
+public class sceneController implements Initializable{
 
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
+     private Stage stage;
+     private Scene scene;
+     private Parent root;
 
-    public void switchToSignUp(ActionEvent event) throws IOException {
+     @FXML
+     private TextField emailText;
+ 
+     @FXML
+     private Label forgotPassword;
+ 
+     @FXML
+     private TextField passwordText;
+ 
+     @FXML
+     private Button signInBtn;
+ 
+     @FXML
+     private Group signUpBtn,closeBtn;
+     
+     @FXML
+    public void switchToSignUp(MouseEvent event) throws IOException {
         try {
             root = FXMLLoader.load(getClass().getResource("scenes/RegisterScene.fxml"));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -24,10 +46,8 @@ public class sceneController {
             e.printStackTrace();
         }
     }
-
     
-
-    public void switchToSignIn(ActionEvent event) throws IOException {
+    public void switchToSignIn(MouseEvent event) throws IOException {
         try {
             root = FXMLLoader.load(getClass().getResource("scenes/LoginScene.fxml"));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -38,6 +58,11 @@ public class sceneController {
             e.printStackTrace();
         }
 
+    }
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        // TODO Auto-generated method stub
+        
     }
 
 }
