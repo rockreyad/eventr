@@ -9,6 +9,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.scene.Group;
 import javafx.scene.Node;
@@ -33,13 +35,27 @@ public class sceneController implements Initializable{
  
      @FXML
      private Group signUpBtn,closeBtn;
+
+     @FXML
+     private Rectangle signInBtnBG;
+ 
+ 
+     @FXML
+     void bgHover(MouseEvent event) {
+         signInBtnBG.setStyle("-fx-fill: red;");
+     }
+
+     @FXML
+     void bgHoverRemove(MouseEvent event) {
+        signInBtnBG.setStyle("");
+     }
      
      @FXML
     public void switchToSignUp(MouseEvent event) throws IOException {
         try {
             root = FXMLLoader.load(getClass().getResource("scenes/RegisterScene.fxml"));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
+            scene = new Scene(root, Color.TRANSPARENT);
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
@@ -51,7 +67,7 @@ public class sceneController implements Initializable{
         try {
             root = FXMLLoader.load(getClass().getResource("scenes/LoginScene.fxml"));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
+            scene = new Scene(root, Color.TRANSPARENT);
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
@@ -62,6 +78,7 @@ public class sceneController implements Initializable{
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
+        
         
     }
 

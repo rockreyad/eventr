@@ -14,9 +14,9 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #0f0222;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #0f0222; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sceneController">
    <children>
-      <AnchorPane prefHeight="390.0" prefWidth="300.0" style="-fx-background-color: white;">
+      <AnchorPane prefHeight="390.0" prefWidth="300.0" style="-fx-background-color: white; -fx-background-radius: 10;">
          <children>
             <VBox alignment="CENTER" fillWidth="false" layoutX="25.0" layoutY="20.0" prefHeight="350.0" prefWidth="250.0" style="-fx-alignment: center;">
                <children>
@@ -80,9 +80,9 @@
                   </VBox>
                </children>
             </VBox>
-            <Group fx:id="signUpBtn" layoutX="257.0" onMouseClicked="#switchToSignUp">
+            <Group fx:id="signUpBtn" layoutX="257.0" onMouseClicked="#switchToSignUp" onMouseEntered="#bgHover" onMouseExited="#bgHoverRemove">
                <children>
-                  <Rectangle arcHeight="2.0" arcWidth="5.0" height="40.0" stroke="#0000002a" strokeType="INSIDE" strokeWidth="0.0" width="33.0">
+                  <Rectangle fx:id="signInBtnBG" arcHeight="2.0" arcWidth="5.0" height="40.0" stroke="#0000002a" strokeType="INSIDE" strokeWidth="0.0" width="33.0">
                      <fill>
                         <LinearGradient endX="1.0" endY="1.0">
                            <stops>

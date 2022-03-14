@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -44,7 +45,7 @@ public class App extends Application {
 
             
 
-            Scene scene1 = new Scene(root);
+            Scene scene1 = new Scene(root, Color.TRANSPARENT);
             primaryStage.setScene(scene1);
             primaryStage.show();
 
