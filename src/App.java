@@ -11,21 +11,20 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class App extends Application {
-       //define your offsets here
-       private double xOffset = 0;
-       private double yOffset = 0;
+    // define your offsets here
+    private double xOffset = 0;
+    private double yOffset = 0;
+
     @Override
     public void start(Stage primaryStage) {
 
-        
         Parent root;
         try {
-            root = FXMLLoader.load(getClass().getResource("scenes/LoginScene.fxml"));
+            root = FXMLLoader.load(getClass().getResource("scenes/DashboardScene.fxml"));
             primaryStage.initStyle(StageStyle.TRANSPARENT);
-            
-            
-            //String css = this.getClass().getResource("assets/main.css").toExternalForm();
-            //scene.getStylesheets().add(css);
+
+            // String css = this.getClass().getResource("assets/main.css").toExternalForm();
+            // scene.getStylesheets().add(css);
 
             root.setOnMousePressed(new EventHandler<MouseEvent>() {
                 @Override
@@ -34,7 +33,7 @@ public class App extends Application {
                     yOffset = event.getSceneY();
                 }
             });
-            
+
             root.setOnMouseDragged(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
@@ -42,8 +41,6 @@ public class App extends Application {
                     primaryStage.setY(event.getScreenY() - yOffset);
                 }
             });
-
-            
 
             Scene scene1 = new Scene(root, Color.TRANSPARENT);
             primaryStage.setScene(scene1);
