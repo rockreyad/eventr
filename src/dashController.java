@@ -25,6 +25,8 @@ public class dashController implements Initializable {
 
     // Button List
     @FXML
+    private Button dashboardBtn;
+    @FXML
     private Button planBtn;
     @FXML
     private Button planListBtn;
@@ -37,6 +39,12 @@ public class dashController implements Initializable {
     @FXML
     void bgHoverPlan(MouseEvent event) {
 
+    }
+
+    // Switch Scenes
+    @FXML
+    void dashboardMain(MouseEvent event) throws IOException {
+        sc = new switchScene(event, "scenes/DashboardScene.fxml");
     }
 
     // Plan List
